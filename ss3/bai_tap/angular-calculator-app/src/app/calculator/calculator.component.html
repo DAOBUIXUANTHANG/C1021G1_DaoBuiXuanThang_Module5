@@ -1,0 +1,21 @@
+<p>calculator works!</p>
+<div>
+  <div>
+    <label for="num1">Number 1</label>
+    <input  id="num1" type="text" placeholder="dien so thu 1" #num1 >
+  </div>
+
+  <div>
+    <label for="num2">Number 2</label>
+    <input id="num2" type="text" placeholder="dien so thu 2" #num2 >
+  </div>
+<div>
+  <button class="operation" #add value="+" (click)="calculation(num1.value,num2.value,add.value)" >ADD</button>
+  <button class="operation" #add value="-" (click)="calculation(num1.value,num2.value,add.value)" >SUBTRACT</button>
+  <button class="operation" #add value="/" (click)="calculation(num1.value,num2.value,add.value)" >DIVIDE</button>
+  <button class="operation" #add value="*" (click)="calculation(num1.value,num2.value,add.value)" >MUTI</button>
+</div>
+
+
+  <p>KẾT QUẢ LÀ : <span> {{result}} </span> </p>
+</div>

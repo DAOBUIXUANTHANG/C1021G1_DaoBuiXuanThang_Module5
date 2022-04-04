@@ -1,0 +1,15 @@
+<h1>color-picker works!</h1>
+
+<div style="margin-top: 20px">
+  <label>Hãy chọn màu của bạn: </label>
+  <button #red type="submit" name="color" value="red" (click)="changColor(red.value)">Màu đỏ</button>
+  <button #blue type="submit" name="color" value="blue"  (click)="changColor(blue.value)">Màu xanh da trời</button>
+  <button #purple type="submit" name="color" value="purple" (click)="changColor(purple.value)">Màu tím</button>
+  <button #green type="submit" name="color" value="green" (click)="changColor(green.value)">Màu xanh lá cây</button>
+  <button #black type="submit" name="color" value="black" (click)="changColor(black.value)">Màu đen</button>
+
+</div>
+<div>
+  Kết quả:
+  <p class="output" [style.color] = "color"> test màu </p>
+</div>
