@@ -3,13 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { ArticleComponent } from './article/article.component';
 import {FormsModule} from '@angular/forms';
+import { LikeComponent } from './like/like.component';
+import { NavbarComponent } from './home/navbar/navbar.component';
+import { FooterComponent } from './home/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColorPickerComponent
+    ArticleComponent,
+    LikeComponent,
+    NavbarComponent,
+    FooterComponent
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <table class="table-light table-hover table-active">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Gender</th>
+        <th>ID Card</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of listCustomer">
+        <td>{{customer.name}}</td>
+        <td>{{customer.birthday}}</td>
+        <td>{{customer.gender}}</td>
+        <td *ngIf="customer.gender ; else esleBlock">
+          Nam
+        </td>
+        <ng-template #esleBlock>
+          <td>Nu</td>
+        </ng-template>
+        <td>{{customer.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

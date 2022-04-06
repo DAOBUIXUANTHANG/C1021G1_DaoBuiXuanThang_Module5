@@ -7,7 +7,9 @@
   <button #purple type="submit" name="color" value="purple" (click)="changColor(purple.value)">Màu tím</button>
   <button #green type="submit" name="color" value="green" (click)="changColor(green.value)">Màu xanh lá cây</button>
   <button #black type="submit" name="color" value="black" (click)="changColor(black.value)">Màu đen</button>
-
+  <br>
+  <label for="chose-color">chon mau</label>
+  <input id="chose-color" type="color"  #colorChanger (change)="changColor(colorChanger.value)" >
 </div>
 <div>
   Kết quả:

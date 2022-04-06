@@ -7,10 +7,15 @@ function fibonacci(n: number) :number{
 }
 
 
-let sum = 0 ;
 
-for (let i = 1 ; i<=20 ; i++){
-    console.log("voi i:  " + i + " so fibonacci " + fibonacci(i));
-    sum+=fibonacci(i);
+function sumFibonacci(n: number ):number{
+    var sum = 0 ;
+    for (let i = 1 ; i<=n ; i++){
+        console.log("voi i:  " + i + " so fibonacci " + fibonacci(i));
+        sum+=fibonacci(i);
+    }
+    console.log(sum);
+    return sum;
 }
-console.log(sum);
+
+sumFibonacci(5);
