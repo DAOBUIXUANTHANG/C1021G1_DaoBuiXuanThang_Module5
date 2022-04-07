@@ -1,4 +1,4 @@
-import {IStudent} from './student/IStudent';
+import {IStudent} from './student-view/IStudent';
 
 export class StudentDao {
   public static students: IStudent[] =[{
@@ -27,6 +27,12 @@ export class StudentDao {
     address: "Da Nang",
     age: 15,
     mark: 4,
-  }]
+  },{
+    id: 5,
+  name: "pham duy tuan",
+  address: "Da Nang",
+  age: 20,
+  mark: 10,
+}]
 
 }

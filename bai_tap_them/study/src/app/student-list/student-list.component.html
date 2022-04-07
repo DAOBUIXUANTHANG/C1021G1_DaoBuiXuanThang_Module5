@@ -26,7 +26,7 @@
         <td class="">Pass</td>
       </ng-template>
       <td>
-        <a href="#" class="btn-success">Detail</a>
+        <a href="#" class="btn-success" (click)="getStudent(student)">Detail</a>
         <a href="#" class="btn-warning">Edit</a>
         <a href="#" class="btn-danger">Delete</a>
       </td>
@@ -34,3 +34,7 @@
     </tbody>
   </table>
 </div>
+<div>
+  <app-student-view *ngIf="student" [student]="student" ></app-student-view>
+</div>
+<!--<app-student-view></app-student-view>-->

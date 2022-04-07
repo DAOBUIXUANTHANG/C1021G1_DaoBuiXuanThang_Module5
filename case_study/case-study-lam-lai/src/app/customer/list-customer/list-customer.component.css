@@ -1,0 +1,12 @@
+.title-customer {
+  /*text-align: center;*/
+  font-family: "Times New Roman", serif ;
+  text-transform: capitalize;
+}
+
+.list-table th{
+  text-transform: capitalize;
+  font-family: "Times New Roman", serif;
+}
+
+

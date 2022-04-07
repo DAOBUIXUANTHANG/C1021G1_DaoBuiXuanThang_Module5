@@ -1,0 +1,43 @@
+<p>student works!</p>
+<div>
+  <h1>Thong tin hoc vien</h1>
+  <table>
+    <tr>
+      <td>Id</td>
+      <td>{{student.id}}</td>
+    </tr>
+
+    <tr>
+      <td>Ten</td>
+      <td>{{student.name}}</td>
+    </tr>
+
+    <tr>
+      <td>Address</td>
+      <td>{{student.address}}</td>
+    </tr>
+
+    <tr>
+      <td>Mark</td>
+      <td>{{student.mark}}</td>
+    </tr>
+
+<!--    <tr>-->
+<!--      <td>mar</td>-->
+<!--      <td><span [style.color]="color">{{student.mark}}</span></td>-->
+<!--    </tr>-->
+  </table>
+
+  <label for="diem"> Chinh diem</label>
+  <br>
+  <input id="diem" #markk type="number" (click)="getMark(markk.value)">
+
+  <label for="add-item">Add item</label>
+  <input type="text" #value id="add-item">
+  <button (click)="addNewItem(#value.value)"> danh gia </button>
+<!--  <div>-->
+<!--    <label for="colors">chinh mau</label>-->
+<!--    <input id="colors" type="color" #colors (change)="getColor(colors.value)">-->
+<!--  </div>-->
+</div>
+
