@@ -1,0 +1,67 @@
+<h3>Day la reactive form</h3>
+
+<p>Create New Student !</p>
+
+<div class="container-fluid" style="padding-right: 100px; padding-left: 100px">
+  <form [formGroup]="reactiveForm" (ngSubmit)="submit()">
+    <div class="form-group" >
+      <label for="id">ID Student</label>
+      <input
+        formControlName="id"
+        type="text" class="form-control" id="id" aria-describedby="emailHelp" placeholder="Enter Id">
+      <div
+        *ngIf="!reactiveForm.controls.id?.valid && (reactiveForm.controls.id?.dirty
+      ||reactiveForm.controls.id?.touched)">
+        Id is not valid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name"> Name Student</label>
+      <input
+        formControlName="name"
+        type="text" class="form-control" id="name" placeholder="Enter student name">
+      <div
+        *ngIf="!reactiveForm.controls.name?.valid && (reactiveForm.controls.name?.dirty
+      ||reactiveForm.controls.name?.touched)">
+        Name is not valid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address"> Address Student</label>
+      <input
+        formControlName="address"
+        type="text" class="form-control" id="address" placeholder="enter Student Address">
+      <div
+        *ngIf="!reactiveForm.controls.address?.valid && (reactiveForm.controls.address?.dirty
+      ||reactiveForm.controls.address?.touched)">
+        Address is not valid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="age"> Age Student</label>
+      <input
+        formControlName="age"
+        type="text" class="form-control" id="age" placeholder="Enter Student Age">
+      <div
+        *ngIf="!reactiveForm.controls.age?.valid && (reactiveForm.controls.age?.dirty
+      ||reactiveForm.controls.address?.touched)">
+        age is not valid
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="mark"> Mark Student</label>
+      <input
+        formControlName="mark"
+        type="text" class="form-control" id="mark" placeholder="Enter Student Mark">
+
+      <div
+        *ngIf="!reactiveForm.controls.mark?.valid && (reactiveForm.controls.mark?.dirty
+      ||reactiveForm.controls.mark?.touched)">
+        mark is not valid
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+

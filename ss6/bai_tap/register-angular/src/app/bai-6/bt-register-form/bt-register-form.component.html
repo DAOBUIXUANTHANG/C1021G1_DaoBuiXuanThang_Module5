@@ -1,0 +1,129 @@
+<p>bt-register-form works!</p>
+
+<div class="container">
+  <form class="" [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm); getPassword(pass.value)"  novalidate>
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="email1">Email address</label>
+        <input
+          formControlName = "email"
+          name="email"
+          type="email" class="form-control" id="email1" aria-describedby="emailHelp">
+      </div>
+      <div
+        *ngIf="registerForm.get('email').errors?.required &&  registerForm.get('email').touched" style="color: red">
+        không được để trống!
+      </div>
+      <div
+        *ngIf="registerForm.get('email').errors?.email &&  registerForm.get('email').touched" style="color: red">
+        email phải có định dạng là (XXX@gmail.com)
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          #pass
+          [(ngModel)]="passwordCheck"
+          formControlName = "password"
+          name="password"
+          type="password" class="form-control" id="password" aria-describedby="emailHelp">
+      </div>
+      <div
+        *ngIf="registerForm.get('password').errors?.required &&  registerForm.get('password').touched" style="color: red">
+        không được để trống!
+      </div>
+      <div
+        *ngIf="registerForm.get('password').errors?.minlength &&  registerForm.get('password').touched" style="color: red">
+        password phải có ít nhất 6 kí tự
+      </div>
+    </div>
+
+    <!--  confirm password-->
+
+    <div class="mb-3">
+      <div class="form-group">
+        <label for="confirm-password">Password</label>
+        <input
+          formControlName = "confirmPassword"
+          name="confirmPassword"
+          type="password" class="form-control" id="confirm-password" aria-describedby="emailHelp">
+      </div>
+
+      <div
+        *ngIf="registerForm.get('password').errors?.pattern &&  registerForm.get('password').touched" style="color: red">
+        password confirm khong khop voi password
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div>
+        <label for="country" >Country</label>
+        <select formControlName="country" name="country" id="country">
+          <option value="">Chon</option>
+          <option *ngFor="let country of countryList" [ngValue]="country.id" >{{country.countryName}}</option>
+        </select>
+        <div
+          *ngIf="registerForm.get('country').errors?.required &&  registerForm.get('country').touched" style="color: red">
+          không được để trống!
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input
+            formControlName = "age"
+            name="age"
+            type="date" class="form-control" id="age" aria-describedby="emailHelp">
+        </div>
+        <div
+          *ngIf="registerForm.get('age').errors?.required &&  registerForm.get('age').touched" style="color: red">
+          không được để trống!
+        </div>
+        <div
+          *ngIf="registerForm.get('age').hasError('ageUnder') &&  registerForm.get('age').touched" style="color: red">
+          bạn k đủ tuổi để đăng kí, bạn có thể khai khống lên đc không ?
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input
+            formControlName = "phone"
+            name="phone"
+            type="text" class="form-control" id="phone" aria-describedby="emailHelp">
+        </div>
+        <div
+          *ngIf="registerForm.get('phone').errors?.required &&  registerForm.get('phone').touched" style="color: red">
+          không được để trống!
+        </div>
+        <div
+          *ngIf="registerForm.get('phone').errors?.pattern &&  registerForm.get('phone').touched" style="color: red">
+          Phone: bắt buộc và phải có định dạng bao gồm: bắt đầu với +84, và theo sau là 9 đến 10 chữ số.
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Gender </label>
+      <input type="radio" value="male"  name="gender" formControlName="gender"> Male
+      <input type="radio" value="female"  name="gender" formControlName="gender"> Female
+      <input type="radio" value="other"  name="gender" formControlName="gender">Other
+      <div class="alert-danger" *ngIf="registerForm.controls.gender.errors?.required && registerForm.controls.gender.touched">
+        Không được để trống!
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">
+      Submit
+    </button>
+  </form>
+</div>
+

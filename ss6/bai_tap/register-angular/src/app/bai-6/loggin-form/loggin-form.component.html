@@ -1,0 +1,42 @@
+<p>loggin-form works!</p>
+<form class="" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)"  novalidate>
+  <div class="mb-3">
+    <div class="form-group">
+      <label for="email1">Email address</label>
+      <input
+        formControlName = "email"
+        name="email"
+        type="email" class="form-control" id="email1" aria-describedby="emailHelp">
+    </div>
+    <div
+      *ngIf="loginForm.get('email').errors?.required &&  loginForm.get('email').touched" style="color: red">
+      không được để trống!
+    </div>
+    <div
+      *ngIf="loginForm.get('email').errors?.email &&  loginForm.get('email').touched" style="color: red">
+      email phải có định dạng là (XXX@gmail.com)
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        formControlName = "password"
+        name="password"
+        type="password" class="form-control" id="password" aria-describedby="emailHelp">
+    </div>
+    <div
+      *ngIf="loginForm.get('password').errors?.required &&  loginForm.get('password').touched " style="color: red">
+      không được để trống!
+    </div>
+    <div
+      *ngIf="loginForm.get('password').errors?.minlength &&  loginForm.get('password').touched " style="color: red">
+      password phải có ít nhất 6 kí tự
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">
+    Submit
+  </button>
+</form>

@@ -1,0 +1,43 @@
+<h3>Day la template form</h3>
+<p>Create New Student !</p>
+
+<form #createStudentForm = "ngForm"
+    (ngSubmit)="onSubmit(createStudentForm)" >
+  <div class="form-group" >
+    <label for="id">ID Student</label>
+    <input
+      ngModel
+      name="id"
+      type="text" class="form-control" id="id" aria-describedby="emailHelp" placeholder="Enter Id">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="name"> Name Student</label>
+    <input
+      ngModel
+      name="name"
+      type="text" class="form-control" id="name" placeholder="Enter student name">
+  </div>
+  <div class="form-group">
+    <label for="address"> Address Student</label>
+    <input
+      ngModel
+      name="address"
+      type="text" class="form-control" id="address" placeholder="enter Student Address">
+  </div>
+  <div class="form-group">
+    <label for="age"> Age Student</label>
+    <input
+      ngModel
+      name="age"
+      type="text" class="form-control" id="age" placeholder="Enter Student Age">
+  </div>
+  <div class="form-group">
+    <label for="mark"> Mark Student</label>
+    <input
+      ngModel
+      name="mark"
+      type="text" class="form-control" id="mark" placeholder="Enter Student Mark">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
