@@ -1,0 +1,24 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Iphone 1" ,
+      "price": 10000,
+      "category":
+      {"id": 1,
+        "name" : "laptop"
+      }
+    }
+  ],
+  "category": [
+    {"id": 1,
+    "name" : "laptop"
+    },
+    {"id": 2,
+      "name" : "phone"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

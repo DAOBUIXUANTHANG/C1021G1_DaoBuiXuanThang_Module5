@@ -1,0 +1,114 @@
+{
+  "customerList": [
+    {
+      "id": 1,
+      "name": "Lê Văn Khánh",
+      "dayOfBirth": "1987-04-14",
+      "gender": "Nam",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "emails": "KhanhLe@gmail.com",
+      "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh",
+      "typeCustomer": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"}
+      },{
+      "id": 2,
+      "name": "Nguyễn Văn A",
+      "dayOfBirth": "1987-04-14",
+      "gender": "Nam",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "emails": "NguyễnVănA@gmail.com",
+      "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh",
+      "typeCustomer": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"}
+      },{
+      "id": 3,
+      "name": "Lê Văn B",
+      "dayOfBirth": "1987-04-14",
+      "gender": "Nam",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "emails": "LêVănB@gmail.com",
+      "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh",
+      "typeCustomer": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"}
+      },{
+      "id": 4,
+      "name": "Doan Huynh Ngoc Tai",
+      "dayOfBirth": "1987-04-14",
+      "gender": "Nam",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "emails": "DoanHuynhNgocTai@gmail.com",
+      "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh",
+      "typeCustomer": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"}
+      },{
+      "id": 5,
+      "name": "Tran Anh Trong",
+      "dayOfBirth": "1987-04-14",
+      "gender": "Nam",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "emails": "TranAnhTrong@gmail.com",
+      "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh",
+      "typeCustomer": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"}
+      },{
+      "id": 6,
+      "name": "Hoang Thi Nhu",
+      "dayOfBirth": "1987-04-14",
+      "gender": "Nam",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "emails": "HoangThiNhu@gmail.com",
+      "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh",
+      "typeCustomer": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"}
+      },{
+      "id": 7,
+      "name": "Jacky Lee",
+      "dayOfBirth": "1987-04-14",
+      "gender": "Nam",
+      "idCard": "048013564",
+      "phone": "0890167542",
+      "emails": "JackyLee@gmail.com",
+      "address": "Số 32, đường Điện Biên Phủ, Quảng Ninh",
+      "typeCustomer": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"}
+      }
+  ],
+  "customerTypeList": [
+    {
+      "id": 1,
+      "nameType": "Diamond"
+    },
+    {
+      "id": 2,
+      "nameType": "Platinum"
+    },
+    {
+      "id": 3,
+      "nameType": "Gold"
+    },
+    {
+      "id": 4,
+      "nameType": "Silver"
+    },
+    {
+      "id": 5,
+      "nameType": "Member"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

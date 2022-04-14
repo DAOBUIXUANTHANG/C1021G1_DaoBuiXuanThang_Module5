@@ -4,5 +4,4 @@ export interface ICustomer{
   gender: boolean;
   idCard: string;
   phone: string;
-  
 }

@@ -1,0 +1,18 @@
+<p>dictionary-page works!</p>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Từ Vựng</th>
+      <th>Nghĩa</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let a of dic">
+    <td>{{a.word}}</td>
+    <td><a   routerLink="/detail/{{a.word}}" style="color: blue">Chi Tiết</a></td>
+  </tr>
+  </tbody>
+
+
+</table>

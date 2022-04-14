@@ -1,29 +1,25 @@
-
+<h1> day la list</h1>
 <div class="container-fluid" style="padding-left: 100px; padding-right: 100px">
   <h1 class="card-title title-customer ">customer list</h1>
   <table class="table table-striped table-light table-hover ta m-4 list-table">
     <thead>
-      <tr >
-        <th >Name</th>
-        <th>Birthday</th>
+      <tr>
+        <th>STT</th>
+        <th>ID</th>
+        <th>Name</th>
         <th>Gender</th>
-        <th>ID Card</th>
         <th>Phone</th>
+        <th>Customer Type</th>
         <th>Active</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let customer of listCustomer">
-        <td>{{customer.name | titlecase}}</td>
-        <td>{{customer.birthday}}</td>
+        <td>{{customer.id}}</td>
+        <td>{{customer.name| titlecase}}</td>
         <td>{{customer.gender}}</td>
-        <td *ngIf="customer.gender ; else esleBlock">
-          Nam
-        </td>
-        <ng-template #esleBlock>
-          <td>Nu</td>
-        </ng-template>
         <td>{{customer.phone}}</td>
+        <td>{{customer.customerType.customerTypeName}}</td>
         <td>
           <button class="btn-danger m-1">Delete</button>
           <button class="btn-light m-1">Detail</button>
@@ -33,3 +29,4 @@
     </tbody>
   </table>
 </div>
+

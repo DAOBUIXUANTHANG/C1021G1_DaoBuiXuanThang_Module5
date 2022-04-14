@@ -1,0 +1,44 @@
+<h1>Cập nhật thông tin sản phẩm</h1>
+<!--<form [formGroup]="productForm" (ngSubmit)="updateProduct(id)">-->
+<!--  <table>-->
+<!--    <tr>-->
+<!--      <td>Mã sản phẩm:</td>-->
+<!--      <td><input type="number" formControlName="id"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Tên sản phẩm:</td>-->
+<!--      <td><input type="text" formControlName="name"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Giá sản phẩm</td>-->
+<!--      <td><input type="number" formControlName="price"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Mô tả về sản phẩm</td>-->
+<!--      <td><input type="text" formControlName="description"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td></td>-->
+<!--      <td><button>Cập nhật</button></td>-->
+<!--    </tr>-->
+<!--  </table>-->
+<!--</form>-->
+
+<form [formGroup]="formGr" (ngSubmit)="submit()">
+  <div>
+    <label>id: </label>
+    <input formControlName="id" type="text">
+  </div>
+  <div>
+    <label>name: </label>
+    <input formControlName="name" type="text">
+  </div>
+  <div>
+    <label>price: </label>
+    <input formControlName="price" type="text">
+  </div>
+  <select formControlName="category"  ngModel="1">
+    <option   *ngFor="let type of categoryList" [value]="type.id">{{type.name}}</option>
+  </select>
+  <button>Add</button>
+</form>

@@ -1,0 +1,45 @@
+<h2 class="text-center">
+  Todo App
+</h2>
+<!--<div class="col-md-8 offset-md-2">-->
+<!--  <input type="text" class="form-control" [formControl]="content" (change)="create()">-->
+<!--  <ul>-->
+<!--    <li (click)="toggleTodo(i)"-->
+<!--        [class.complete]="todo.complete"-->
+<!--        *ngFor="let todo of todos; index as i">-->
+<!--      {{todo.content}}-->
+<!--      <button (click)="delete(todo.id)">xóa</button>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
+
+
+<div class="col-md-8 offset-md-2">
+  <input type="text" class="form-control" [formControl]="content" (change)="create()" >
+  <ul>
+    <li (click)="toggleTodo(i)"
+        [class.complete]="todo.complete"
+        *ngFor="let todo of todos; index as i">
+      {{todo.content}}
+      <button (click)="delete(todo.id)">Xóa</button>
+    </li>
+  </ul>
+</div>
+<!--<div class="container-fluid">-->
+<!--  <table class="table table-dark mb-3">-->
+<!--    <thead class="">-->
+<!--    <tr>-->
+<!--      <td>id</td>-->
+<!--      <td>content</td>-->
+<!--      <td>active</td>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr *ngFor="let c of todos">-->
+<!--      <td>{{c.id}}</td>-->
+<!--      <td>{{c.content}}</td>-->
+<!--      <td><a href="#">xoa</a></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->

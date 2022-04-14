@@ -9,6 +9,9 @@ import { NavbarComponent } from './home/navbar/navbar.component';
 import { BodyComponent } from './home/body/body.component';
 import { ListCustomerComponent } from './customer/list-customer/list-customer.component';
 import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { ViewCustomerComponent } from './customer/view-customer/view-customer.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,15 @@ import { CreateCustomerComponent } from './customer/create-customer/create-custo
     NavbarComponent,
     BodyComponent,
     ListCustomerComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    ViewCustomerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
